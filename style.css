@@ -1357,39 +1357,10 @@ footer {
    ABOUT MOBILE
    ================================= */
 
-@media (max-width: 950px) {
-
-    .about-layout {
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-    }
-
-    .about-photos {
-        justify-content: flex-start;
-
-        max-width: 600px;
-    }
-
-    .about-content {
-        max-width: 720px;
-    }
-}
-
-
-@media (max-width: 550px) {
-
-    .about-photos {
-        gap: 7px;
-
-        padding: 20px 2px;
-    }
-
-    .about-photo {
-        width: 31vw;
-        height: 40vw;
-
-        max-width: 125px;
-        max-height: 165px;
-    }
+.about-photo {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
 }
