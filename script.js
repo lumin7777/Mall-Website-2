@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-
+    window.scrollTo(0, 0);
     /* CUSTOM CURSOR */
 
     const cursor = document.querySelector(".custom-cursor");
