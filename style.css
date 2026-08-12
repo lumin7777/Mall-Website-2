@@ -1178,50 +1178,38 @@ footer {
 /* =================================
    ABOUT ME PHOTO GALLERY
    ================================= */
+/* =================================
+ABOUT ME PHOTO
+================================= */
 
 .about-layout {
     display: grid;
-
     grid-template-columns: 1.15fr 1fr;
-
     align-items: center;
-
     gap: 60px;
 }
 
-
-/* Photo row */
+/* Single photo container */
 
 .about-photos {
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    gap: 12px;
-
     position: relative;
-
     padding: 25px 5px;
 }
 
-
-/* Individual photo */
+/* The photo */
 
 .about-photo {
-    width: 145px;
-    height: 190px;
-
-    position: relative;
-
+    width: 200px;
+    height: 250px;
     padding: 7px;
 
     background: rgba(255, 255, 255, 0.75);
 
     border: 1px solid var(--border);
-
-    border-radius: 14px;
+    border-radius: 15px;
 
     box-shadow:
         0 12px 30px rgba(118, 35, 67, 0.12),
@@ -1232,8 +1220,7 @@ footer {
         box-shadow 0.3s ease;
 }
 
-
-/* The actual images */
+/* The actual image */
 
 .about-photo img {
     width: 100%;
@@ -1246,30 +1233,20 @@ footer {
     border-radius: 9px;
 }
 
-
-/* Slightly different positioning */
-
-.photo-one {
-    transform: rotate(-4deg) translateY(8px);
-}
-
 /* Cute hover effect */
 
 .about-photo:hover {
     transform:
         translateY(-10px)
-        rotate(0deg)
+        rotate(2deg)
         scale(1.04);
-
-    z-index: 5;
 
     box-shadow:
         0 18px 40px rgba(118, 35, 67, 0.16),
         0 0 30px rgba(217, 87, 135, 0.16);
 }
 
-
-/* Tiny decorations */
+/* Tiny sparkle */
 
 .photo-sparkle {
     position: absolute;
@@ -1287,16 +1264,9 @@ footer {
         photoSparkle 2.5s ease-in-out infinite alternate;
 }
 
-.photo-one .photo-sparkle {
-    top: -12px;
-    left: -9px;
-}
-
-
 @keyframes photoSparkle {
     from {
         opacity: 0.35;
-
         transform:
             scale(0.8)
             rotate(0deg);
@@ -1304,13 +1274,11 @@ footer {
 
     to {
         opacity: 1;
-
         transform:
             scale(1.15)
             rotate(12deg);
     }
 }
-
 
 /* About text */
 
@@ -1326,15 +1294,22 @@ footer {
     font-size: 1rem;
 }
 
-
 /* =================================
-   ABOUT MOBILE
-   ================================= */
+ABOUT MOBILE
+================================= */
 
-.about-photo {
-  width: 200px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 15px;
-  display: block;
-}
+@media (max-width: 800px) {
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-photos {
+        order: -1;
+    }
+
+    .about-photo {
+        width: 200px;
+        height: 250px;
+    }
