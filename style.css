@@ -147,10 +147,6 @@ a {
    LOADING SCREEN
    ================================= */
 
-/* =================================
-   LOADING SCREEN
-   ================================= */
-
 #loader {
     position: fixed;
     inset: 0;
@@ -1257,15 +1253,6 @@ footer {
     transform: rotate(-4deg) translateY(8px);
 }
 
-.photo-two {
-    transform: translateY(-8px);
-}
-
-.photo-three {
-    transform: rotate(4deg) translateY(8px);
-}
-
-
 /* Cute hover effect */
 
 .about-photo:hover {
@@ -1305,19 +1292,6 @@ footer {
     left: -9px;
 }
 
-.photo-two .photo-sparkle {
-    bottom: -10px;
-    right: -10px;
-
-    animation-delay: -1s;
-}
-
-.photo-three .photo-sparkle {
-    top: -12px;
-    right: -9px;
-
-    animation-delay: -1.7s;
-}
 
 @keyframes photoSparkle {
     from {
