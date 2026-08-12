@@ -147,15 +147,16 @@ a {
    LOADING SCREEN
    ================================= */
 
+/* =================================
+   LOADING SCREEN
+   ================================= */
+
 #loader {
     position: fixed;
-
     inset: 0;
-
     z-index: 9999;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -166,25 +167,22 @@ a {
             #ffeef6
         );
 
-    transition:
-        opacity 0.7s ease,
-        visibility 0.7s ease;
-}
+    animation: loaderDisappear 0.8s ease forwards;
+    animation-delay: 1.5s;
 
-#loader.loaded {
-    opacity: 0;
-    visibility: hidden;
+    pointer-events: none;
 }
 
 .loader-inner {
     text-align: center;
+
+    animation: loaderContentDisappear 0.5s ease forwards;
+    animation-delay: 1.2s;
 }
 
 .loader-sigil {
     color: var(--pink);
-
     font-size: 2rem;
-
     margin-bottom: 10px;
 
     animation:
@@ -196,7 +194,6 @@ a {
     font-family: "Quicksand", sans-serif;
 
     font-size: 2rem;
-
     font-weight: 700;
 
     color: var(--pink-deep);
@@ -270,6 +267,24 @@ a {
     }
 }
 
+@keyframes loaderDisappear {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes loaderContentDisappear {
+    to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
 
 /* =================================
    NAVIGATION
